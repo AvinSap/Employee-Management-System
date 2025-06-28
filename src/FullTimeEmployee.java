@@ -1,4 +1,6 @@
-public class FullTimeEmployee extends Employee implements Taxable,Promotable{
+import java.io.Serializable;
+
+public class FullTimeEmployee extends Employee implements Taxable,Promotable, Serializable {
     //properties:
     int noOfHours;
     int salary;
@@ -53,5 +55,16 @@ public class FullTimeEmployee extends Employee implements Taxable,Promotable{
     public void applyTax() {
         System.out.println("Your total Salary after Taxes is: $" + (salary - 75) );
 
+    }
+
+    @Override
+    public String toString() {
+        return "FullTimeEmployee{" +
+                "noOfHours=" + noOfHours +
+                ", salary=" + salary +
+                ", experience=" + experience +
+                ", address='" + address + '\'' +
+                ", promotion=" + promotion +
+                '}';
     }
 }

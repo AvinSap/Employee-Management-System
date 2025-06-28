@@ -1,4 +1,6 @@
-public class PartTimeEmployee extends Employee implements Taxable,Promotable{
+import java.io.Serializable;
+
+public class PartTimeEmployee extends Employee implements Taxable,Promotable, Serializable {
     int noOfHours;
     int salary;
     int experience;
@@ -51,5 +53,16 @@ public class PartTimeEmployee extends Employee implements Taxable,Promotable{
     @Override
     public String getNameOfEmployee() {
         return "Part-Time Employee";
+    }
+
+    @Override
+    public String toString() {
+        return "PartTimeEmployee{" +
+                "noOfHours=" + noOfHours +
+                ", salary=" + salary +
+                ", experience=" + experience +
+                ", Address='" + Address + '\'' +
+                ", promotion=" + promotion +
+                '}';
     }
 }

@@ -1,4 +1,6 @@
-public class Intern extends Employee implements Promotable{
+import java.io.Serializable;
+
+public class Intern extends Employee implements Promotable, Serializable {
     //properties
     int noOfHours;
     int Salary;
@@ -36,5 +38,14 @@ public class Intern extends Employee implements Promotable{
     @Override
     public String getNameOfEmployee() {
         return "Intern";
+    }
+
+    @Override
+    public String toString() {
+        return "Intern{" +
+                "noOfHours=" + noOfHours +
+                ", Salary=" + Salary +
+                ", address='" + address + '\'' +
+                '}';
     }
 }

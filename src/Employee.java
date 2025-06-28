@@ -1,4 +1,7 @@
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String nameOfEmployee;
     private int age;
     private String position;
@@ -12,6 +15,8 @@ public class Employee {
     //Parameterized Constructor for set values
     public Employee(String nameOfEmployee){
         this.nameOfEmployee = nameOfEmployee;
+        // set default age to 5 years
+        this.age = 5;
     }
 
     public String getNameOfEmployee() {
